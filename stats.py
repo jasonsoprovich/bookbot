@@ -5,6 +5,6 @@ def get_book_text():
   return book_content
 
 def get_num_words():
-  book_content = get_book_text()
-  words = book_content.split()
-  return len(words)
+  return len(get_book_text().split())
+
+# def get_char_count():
