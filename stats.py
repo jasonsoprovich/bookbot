@@ -1,14 +1,13 @@
-def get_book_text():
-  book_input = "books/frankenstein.txt"
+def get_book_text(book_input):
   with open(book_input) as book_content:
     book_content = book_content.read()
   return book_content
 
-def get_word_count():
-  return len(get_book_text().split())
+def get_word_count(book_input):
+  return len(get_book_text(book_input).split())
 
-def get_char_count():
-  char_list = list(get_book_text().lower())
+def get_char_count(book_input):
+  char_list = list(get_book_text(book_input).lower())
   char_count = {}
   for char in char_list:
     if char.isalpha():
@@ -18,8 +17,8 @@ def get_char_count():
 def sort_on(dict):
   return dict["num"]
 
-def get_sorted_chars():
-  char_count = get_char_count()
+def get_sorted_chars(book_input):
+  char_count = get_char_count(book_input)
   sorted_chars = []
   for char, count in char_count.items():
     sorted_chars.append({"char": char, "num": count})
