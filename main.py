@@ -1,8 +1,10 @@
-from stats import get_num_words
+from stats import get_word_count
+from stats import get_char_count
 
 def main():
-  num_words = get_num_words()
-  output = f"Found {num_words} total words"
-  print(output)
+  word_count = get_word_count()
+  char_count = get_char_count()
+  print(f"Found {word_count} total words")
+  print(char_count)
 
 main()

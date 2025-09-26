@@ -4,7 +4,12 @@ def get_book_text():
     book_content = book_content.read()
   return book_content
 
-def get_num_words():
+def get_word_count():
   return len(get_book_text().split())
 
-# def get_char_count():
+def get_char_count():
+  char_list = list(get_book_text().lower())
+  char_count = {}
+  for char in char_list:
+    char_count[char] = char_count.get(char, 0) + 1
+  return(char_count)
